@@ -12,13 +12,106 @@
             <nav>
                 <img src="images/logo.png" class="logo">
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
                     <li><a href="#">Projects</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
+            
+        </div>
+        <div class="header-text">
+            <h1>Hi, I'm Tamjeed Zunayed</h1>
+            <p>A Computer Science Student</p>
         </div>
     </div>
+    <div id="about">
+        <div class="about-col-1">
+            <h1><span>About Me</span></h1>
+            <p>I am a Computer Science student, expected to graduate in 2026, with a strong interest in Software development and game design. 
+                I am also a Teaching Assistant at Carleton University, where I help students learn Java and Object-Oriented Programming in the "Intro to Computer Programming II" course. 
+                I enjoy applying my programming skills to solve real-world problems and create innovative solutions.
+            </p>    
+        </div>
+    </div>
+    <div id="experience">
+        <div class="experience-col-1">
+            <h1>My Experience</h1>
+            <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('work')">Work Experience</p>
+                <p class="tab-links" onclick="opentab('edu')">Education</p>
+                <p class="tab-links" onclick="opentab('volun')">Volunteership</p>
+            </div>
+            <div class="tab-contents active-tab" id="work">
+                <ul>
+                    <li><span>Teaching Assistant</span><br>Teaching Assistant in Carleton University’s “Intro to Computer Programming II” course.
+                        Conducted weekly office hours to facilitate students with Java & OOP, assignments, and exam preparation that helped them attain knowledge in different aspects of computer science.</li>
+                    <li><span>Sales Associate</span><br>
+                        A part time sales associate at Under Armour <br>
+                        Collaborated with teammates to achieve store goals <br>
+                        Provide direct sales assistance to Athletes to meet sales KPI targets set by the Retail Store Manager
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="edu">
+                <ul>
+                    <li><span>Carleton Universtiy</span><br>2022 - 2026 (3rd Year)<br>
+                        Bachelor's degree, Computer Science <br>
+                        Grade: 3.53/4 GPA
+                    </li>
+                    <li><span>A.Y. Jackson Secondary School</span><br>2019 - 2022 <br>
+                        Grade: 90%
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="volun">
+                <ul>
+                    <li><span>Student Intern</span><br>Chromeworks · Co-op <br>
+                        2019<br>
+                        Helped kids one-on-one on problems they were facing and taught them about computer programming.
+                        Created video tutorials on the basics of how to use a computer programming language called Scratch.
+                    </li>
+                    <li><span>Camp Counselor Volunteer</span><br>Carleton Universtiy Virtual Ventures<br>2018 <br>
+                        Helped supervise campers and organize Coding & Programming lessons to improve education and overall efficiency.
+                        Helped with administrative support, including managing shifts, coordinating files and sorting papers.
+                        Assisted Supervisor with managing resources and organizing projects for campers.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for (tablink of tablinks){
+            console.log(tablink.classList)
+            tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+</script>
+
 </body>
 </html>

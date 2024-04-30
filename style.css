@@ -8,12 +8,12 @@
 body {
     background-color: #080808;
     color: #fff;
+    background: hsla(173, 100%, 2%, 1);
 }
 
 #header{
     width: 100%;
-    height: 100vh;
-    background: hsla(173, 100%, 2%, 1);
+    height: 80vh;
 }
 
 .container{
@@ -49,7 +49,7 @@ nav ul li a::after{
     position: absolute;
     left: 0;
     bottom: -6px;
-    transition: 0.5s;
+    transition: 0.2s;
 }
 nav ul li a:hover::after{
     width: 100%;
@@ -58,4 +58,100 @@ nav ul li a:hover::after{
 .logo{
     width: 180px;
     height: 65px;
+}
+
+.header-text{
+    padding: 10px 7%;
+    margin-top: 10%;
+    font-size: 30px;
+
+}
+
+.header-text h1{
+    font-size: 50px;
+    margin-top: 20px;
+}
+
+.header-text p{
+    color: #9b9b9b;
+}
+
+#about{
+    padding: 15px 7%;
+    font-size: 22px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1 h1{
+    padding-bottom: 10px;
+    border-bottom: 3px solid #EEEEEE;
+}
+
+.about-col-1 p {
+    color: #9b9b9b;
+    padding-top: 10px;
+    font-size: smaller;
+}
+
+#experience{
+    padding: 10px 7%;
+    font-size: 22px;
+}
+
+.experience-col-1 h1{
+    padding-bottom: 10px;
+    border-bottom: 3px solid #EEEEEE;
+}
+
+.tab-titles{
+    display: flex;
+    margin: 20px 0 23px;
+}
+
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 4px;
+    background: #EEEEEE;
+    position: absolute;
+    left: 10%;
+    bottom: -8px;
+    transition: 0.2s;
+}
+
+.tab-links.active-link::after{
+    width: 80%;
+    background: #5b8a83;
+}
+
+.tab-contents{
+    display: none;
+}
+
+.tab-contents.active-tab{
+    display: block;
+}
+
+.tab-contents ul li{
+    color: #9b9b9b;
+    font-size: smaller;
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tab-contents ul li span{
+    color: #EEEEEE;
 }
