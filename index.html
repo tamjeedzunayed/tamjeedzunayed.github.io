@@ -126,7 +126,7 @@
 
             <a href="#" class="btn" id="see-more-btn">See More</a>
 
-            <div class="hidden-projects">
+            <div class="hidden-projects" display="none">
                 <!-- Additional projects to be initially hidden -->
                 <div class="project">
                     <img src="images/1704511581579.jpg">
@@ -192,7 +192,7 @@
 
         var hiddenProjects = document.querySelector(".hidden-projects");
         if (hiddenProjects.style.display === "none") {
-            print(hello)
+            console.log("hello")
             hiddenProjects.style.display = "grid"; // Show additional projects when button is clicked
             this.textContent = "See Less"; // Change button text to "See Less"
         } else {
